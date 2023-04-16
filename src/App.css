@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green-clr: #02c39a;
+  --gray-clr: #d1d1d1;
+  --bg-clr: #f9f9f9;
+  --ligt-pink-clr: #fff4fc;
+  --light-green-clr: #b5e48c;
+}
+
+body {
+  background-color: var(--bg-clr);
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  /* outline: 1px solid gray; */
+  font-family: "Sofia Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.section {
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+  color: #2e2e2e;
+}
+
+.title.underline {
+  position: absolute;
+  width: 300px;
+  height: 25px;
+  background-color: var(--light-green-clr);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.block {
+  display: block;
+}
+
+.btn-login {
+  background-color: var(--green-clr);
+  width: 250px;
+  margin-top: 15px;
+  padding: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.phone-input {
+  /* padding: 15px 15px !important; */
+  border: 1px solid var(--gray-clr) !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+  padding: 25px 45px !important;
+  
+}
+
+.phone-input:focus {
+  border: none !important;
+  border-bottom: 2px solid var(--green-clr) !important;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+}
+
+.form-row.full {
+  width: 100%;
+}
+
+.prod-item {
+  width: 290px;
+}
+
+.modal {
+  z-index: 150;
+}
+.phone-number {
+  padding: 22px;
+  width: 100% !important;
+}
+
+
+.select {
+  padding: 10px 15px;
+  border: 1px solid var(--gray-clr);
+  outline: none;
+  width: 100%;
+}
+.select:focus {
+  border: none;
+
+  border-bottom: 1px solid var(--green-clr);
+}
+
+menu.active {
+  transform: translate(0) !important;
+}
+
+.screen {
+  min-height: 100vh;
+}
