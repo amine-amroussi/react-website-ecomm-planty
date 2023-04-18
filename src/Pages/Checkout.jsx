@@ -12,10 +12,13 @@ const Checkout = () => {
     isAdressModalOpened,
     toggleAdressModal,
     handleStripe,
+    shippingFee,
   } = useCartContext();
 
   useEffect(() => {
     fetchAdress();
+    const cartObj = { products, shippingFee, tax: 0 };
+    window.localStorage.setItem("cart-products", JSON.stringify(cartObj));
     // eslint-disable-next-line
   }, []);
 

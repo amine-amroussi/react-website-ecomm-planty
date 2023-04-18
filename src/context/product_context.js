@@ -142,7 +142,6 @@ export const ProductProvider = ({ children }) => {
       }
     } catch (error) {
       dispatch({ type: FETCH_FEATURED_PRODUCTS_FAILED });
-      console.log(error);
     }
   };
 
@@ -206,7 +205,6 @@ export const ProductProvider = ({ children }) => {
 
   // SELECT IMAGE
   const selectImage = ({ image }) => {
-    console.log(image);
     dispatch({ type: SELECT_IMAGE, payload: { image } });
   };
 
@@ -246,7 +244,6 @@ export const ProductProvider = ({ children }) => {
         toggleReviewModal();
       }
     } catch (error) {
-      console.log(error);
     }
   };
 
@@ -260,7 +257,6 @@ export const ProductProvider = ({ children }) => {
       }
     } catch (error) {
       dispatch({ type: EDIT_REVIEW_FAILED });
-      console.log(error);
     }
   };
 
@@ -269,7 +265,6 @@ export const ProductProvider = ({ children }) => {
     dispatch({ type: FETCH_PRODUCT_REVIEWS_BEGGING });
     try {
       const response = await axios.get(`product/${productId}/review/`);
-      console.log(response.data);
       if (response.status === 200) {
         dispatch({
           type: FETCH_PRODUCT_REVEIWS_SUCCESS,
@@ -277,7 +272,6 @@ export const ProductProvider = ({ children }) => {
         });
       }
     } catch (error) {
-      console.log(error);
       dispatch({ type: FETCH_PRODUCT_REVEIWS_FAILED });
     }
   };

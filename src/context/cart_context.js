@@ -101,7 +101,6 @@ export const CartProvider = ({ children }) => {
         dispatch({ type: REMOVE_CART_SUCCESS, payload: response.data });
       }
     } catch (error) {
-      console.log(error);
     }
   };
 
@@ -114,7 +113,6 @@ export const CartProvider = ({ children }) => {
         showSuccessAlert("The product was removed successfuly..");
       }
     } catch (error) {
-      console.log(error);
     }
   };
 
@@ -138,7 +136,6 @@ export const CartProvider = ({ children }) => {
       total: state.total,
     };
     const response = await axios.post(`/order/create-checkout-session`, cart);
-    console.log(response);
     const data = response.data;
     stripe.redirectToCheckout({ sessionId: data.id });
   };
@@ -162,7 +159,6 @@ export const CartProvider = ({ children }) => {
       }
     } catch (error) {
       dispatch({ type: CREATE_ADRESS_FAILED });
-      console.log(error);
     }
   };
   // fetch adress
@@ -174,7 +170,6 @@ export const CartProvider = ({ children }) => {
         dispatch({ type: FETCH_ADRESS_SUCCESS, payload: response.data });
       }
     } catch (error) {
-      console.log(error);
       dispatch({ type: FETCH_ADRESS_FAILED });
     }
   };
@@ -187,7 +182,6 @@ export const CartProvider = ({ children }) => {
         dispatch({ type: UPDATE_ADRESS_SUCCESS, payload: response.data });
       }
     } catch (error) {
-      console.log(error);
       dispatch({ type: UPDATE_ADRESS_FAILED });
     }
   };
@@ -208,7 +202,6 @@ export const CartProvider = ({ children }) => {
       }
     } catch (error) {
       dispatch({ type: LOAD_ALL_COUNTRIES_FAILED });
-      console.log(error);
     }
   };
   return (

@@ -19,7 +19,6 @@ const UserInformationtion = () => {
   };
 
   const handleSubmit = (e) => {
-    console.log("submited");
     e.preventDefault();
     updateUser({ user: userInfo });
   };

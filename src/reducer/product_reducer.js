@@ -47,7 +47,6 @@ const product_reducer = (state, action) => {
     return { ...state, loadingImage: true };
   }
   if (action.type === UPLOAD_PRODUCT_IMAGE_SUCCESS) {
-    console.log(action.payload);
     const { image } = action.payload;
     return { ...state, loadingImage: false, uploadedImage: image };
   }
@@ -242,11 +241,9 @@ const product_reducer = (state, action) => {
   // FIND USER REVEIW
   if (action.type === FIND_USER_REVIEW) {
     const userId = action.payload?.userId;
-    console.log(userId);
     const findReview = state.singleProductReview.find(
       (reveiw) => reveiw.user?._id === userId
     );
-    console.log(findReview);
     return { ...state, singleUserReview: findReview };
   }
 
@@ -263,7 +260,6 @@ const product_reducer = (state, action) => {
   //     }
   //   })
 
-  //   console.log(tempReviews)
   // }
 
   // SET CATEGORY

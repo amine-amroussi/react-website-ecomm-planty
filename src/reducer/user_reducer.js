@@ -1,6 +1,9 @@
 import {
   CHANGE_PASSWORD_BEGGING,
   CHANGE_PASSWORD_FAILED,
+  FETCH_ALL_USERS_BEGGING,
+  FETCH_ALL_USERS_FAILED,
+  FETCH_ALL_USERS_SUCCESS,
   LOGIN_BEGGING,
   LOGIN_FAILED,
   LOGIN_SUCCESS,
@@ -20,7 +23,6 @@ import {
   UPDATE_USER_BEGGING,
   UPDATE_USER_FAILED,
   UPDATE_USER_SUCCESS,
-  
 } from "../actions";
 
 const user_reducer = (state, action) => {
@@ -104,18 +106,34 @@ const user_reducer = (state, action) => {
   if (action.type === CHANGE_PASSWORD_BEGGING) {
     return { ...state, laoding: true };
   }
-  
+
   if (action.type === CHANGE_PASSWORD_FAILED) {
     return { ...state, laoding: false };
   }
 
   // TOGGLE FILTER BAR
-  if(action.type === TOGGLE_FILTERBAR) {
-    let {isFilterBarOpen} = state
-    isFilterBarOpen = !isFilterBarOpen
-    return {...state, isFilterBarOpen : isFilterBarOpen}
+  if (action.type === TOGGLE_FILTERBAR) {
+    let { isFilterBarOpen } = state;
+    isFilterBarOpen = !isFilterBarOpen;
+    return { ...state, isFilterBarOpen: isFilterBarOpen };
   }
 
+  //FETCH ALL USERS
+  if (action.type === FETCH_ALL_USERS_BEGGING) {
+    console.log(`the was exec`)
+    return { ...state, loading: true };
+  }
+
+  if (action.type === FETCH_ALL_USERS_FAILED) {
+    return { ...state, loading: false };
+  }
+
+  if (action.type === FETCH_ALL_USERS_SUCCESS) {
+    const { users } = action.payload;
+
+    console.log(action.payload);
+    return { ...state, allUsers: [...users], loading: false };
+  }
 
   return state;
 };

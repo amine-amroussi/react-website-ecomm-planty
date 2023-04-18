@@ -58,7 +58,7 @@ const FilterProducts = () => {
           </li>
 
           {categories.map((cat, idx) => (
-            <li>
+            <li key={idx} >
               <button
               className={`btn btn-filter ${active === idx && 'active'}`}
               name="category"

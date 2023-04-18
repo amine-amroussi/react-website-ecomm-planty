@@ -98,7 +98,6 @@ const AdminCreateProduct = () => {
     setFeatured(e.target.checked)
   }
 
-  console.log(featured)
 
   // if (loading) return "Loading";
 

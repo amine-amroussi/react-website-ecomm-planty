@@ -5,7 +5,6 @@ import errorImage from "../assets/error-img.png";
 
 const Error = () => {
   const error = useRouteError();
-  console.log(error);
 
   return (
     <Wrapper>

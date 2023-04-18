@@ -29,8 +29,7 @@ const cart_reducer = (state, action) => {
   if (action.type === ADD_TO_CART_FAILED) return { ...state, loading: false };
   if (action.type === ADD_TO_CART_SUCCESS) {
     const { products, total } = action.payload.cart;
-    console.log(products);
-    console.log(action.payload.cart);
+
     return { ...state, products: [...products], total };
   }
 
@@ -117,7 +116,6 @@ const cart_reducer = (state, action) => {
   if (action.type === UPDATE_ADRESS_FAILED) return { ...state, loading: false };
   if (action.type === UPDATE_ADRESS_SUCCESS) {
     const { adress } = action.payload;
-    console.log(action.payload);
     return { ...state, adress };
   }
   // TOGGLE THE ASRESS MODAL

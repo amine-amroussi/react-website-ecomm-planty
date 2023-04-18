@@ -60,20 +60,12 @@ const Products = () => {
             </select>
           </div>
         </div>
-        <div className="products ">
+        <div className="products screen ">
           {filtredProducts?.length === 0 ? (
             <h2>There is no products ...</h2>
           ) : (
             filtredProducts?.map((product) => (
-              <AnimationOnScroll
-                animateIn="animate__jackInTheBox"
-                delay={500}
-                animateOnce={true}
-                className="prod-item "
-                key={product._id}
-              >
-                <Product {...product} />
-              </AnimationOnScroll>
+              <Product key={product._id} {...product} />
             ))
           )}
         </div>

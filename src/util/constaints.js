@@ -28,6 +28,18 @@ export const sidebarLinks = [
     _id: 5,
     title: "E-Mail",
     url: "/admin-panel/email",
+    children: [
+      {
+        id: 1,
+        title: "Send Single Email",
+        url: "/admin-panel/send-single-email",
+      },
+      {
+        id: 2,
+        title: "Send Email For All",
+        url: "/admin-panel/send-all-users",
+      },
+    ],
   },
 ];
 

@@ -6,6 +6,8 @@ import AdminChooseCategory from "./AdminChooseCategory";
 import UploadImage from "./UploadImage";
 import AdminProduct from "./AdminProduct";
 import AdminFreeShipping from "./AdminFreeShipping";
+import AdminSingleOrder from "./AdminSingleOrder";
+import AdminTable from "./AdminTable";
 
 export {
   AdminHeader,
@@ -15,5 +17,7 @@ export {
   AdminChooseCategory,
   UploadImage,
   AdminProduct,
-  AdminFreeShipping
+  AdminFreeShipping,
+  AdminSingleOrder,
+  AdminTable,
 };

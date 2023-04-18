@@ -15,10 +15,6 @@ const handleLoading = () => (<LoadingPage />)
 const Home = () => {
 
   const params = new URL(document.location).searchParams;
-  const status = params.get("cancel");
-
-  console.log(status)
-
 
   const {fetchFeaturedProducts} = useProductContext()
   useEffect(() => {
