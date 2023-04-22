@@ -120,7 +120,6 @@ const user_reducer = (state, action) => {
 
   //FETCH ALL USERS
   if (action.type === FETCH_ALL_USERS_BEGGING) {
-    console.log(`the was exec`)
     return { ...state, loading: true };
   }
 
@@ -131,7 +130,6 @@ const user_reducer = (state, action) => {
   if (action.type === FETCH_ALL_USERS_SUCCESS) {
     const { users } = action.payload;
 
-    console.log(action.payload);
     return { ...state, allUsers: [...users], loading: false };
   }
 

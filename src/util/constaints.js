@@ -41,6 +41,11 @@ export const sidebarLinks = [
       },
     ],
   },
+  {
+    _id: 6,
+    title: "Back to store",
+    url: "/",
+  },
 ];
 
 export const chooseCategories = [

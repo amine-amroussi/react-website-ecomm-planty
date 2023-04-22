@@ -1,5 +1,6 @@
 import React, { useContext, useReducer } from "react";
 import {
+  CALCULATE_REVENUE,
   CLEAR_USER_CART_BEGGING,
   CLEAR_USER_CART_SUCCESS,
   CREATE_ORDER_BEGGING,
@@ -22,6 +23,8 @@ const inistialState = {
   loading: false,
   orders: [],
   allOrders: [],
+  revenue: 0,
+  sales : 0
 };
 
 const OrderContext = React.createContext();
@@ -37,7 +40,6 @@ export const OrderProvider = ({ children }) => {
     try {
       const response = await axios.post("/order", order);
       if (response.status === 201) {
-        console.log(response.data);
         dispatch({ type: CREATE_ORDER_SUCCESS, payload: response.data });
         clearCart();
         localStorage.setItem("cart-products", null);
@@ -54,12 +56,10 @@ export const OrderProvider = ({ children }) => {
     try {
       const response = await axios.get("/order/showAllMyOrders");
       if (response.status === 200) {
-        console.log(response.data);
         dispatch({ type: FETCH_USER_ORDERS_SUCCESS, payload: response.data });
       }
     } catch (error) {
       dispatch({ type: FETCH_USER_ORDERS_FAILED });
-      console.log(error);
     }
   };
 
@@ -69,7 +69,6 @@ export const OrderProvider = ({ children }) => {
     try {
       const response = await axios.get("/order/");
       if (response.status === 200) {
-        console.log(response.data);
         dispatch({ type: FETTCH_ALL_ORDERS_SUCCESS, payload: response.data });
       }
     } catch (error) {
@@ -85,7 +84,6 @@ export const OrderProvider = ({ children }) => {
         dispatch({ type: CLEAR_USER_CART_SUCCESS });
       }
     } catch (error) {
-      console.log(error);
     }
   };
 
@@ -98,8 +96,11 @@ export const OrderProvider = ({ children }) => {
         showSuccessAlert("The Status was edited.");
       }
     } catch (error) {
-      console.log(error);
     }
+  };
+
+  const calculateRevenue = () => {
+    dispatch({ type: CALCULATE_REVENUE });
   };
 
   return (
@@ -110,6 +111,7 @@ export const OrderProvider = ({ children }) => {
         fetchUserOrders,
         ftechAllOrders,
         editStatus,
+        calculateRevenue
       }}
     >
       {children}

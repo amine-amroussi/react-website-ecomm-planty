@@ -1,4 +1,5 @@
 import {
+  CALCULATE_REVENUE,
   CREATE_ORDER_BEGGING,
   CREATE_ORDER_FAILED,
   CREATE_ORDER_SUCCESS,
@@ -45,6 +46,18 @@ const order_reducer = (state, action) => {
   if (action.type === FETTCH_ALL_ORDERS_SUCCESS) {
     const { orders } = action.payload;
     return { ...state, allOrders: [...orders] };
+  }
+
+  // CLCULATE REVENUE
+  if(action.type === CALCULATE_REVENUE) {
+    const {allOrders} = state
+    let revenue = 0
+    let sales = 0
+    allOrders.forEach(order => {
+      revenue += order.subtotal
+      sales += order.total
+    });
+    return {...state, revenue, sales }
   }
 
   return state;

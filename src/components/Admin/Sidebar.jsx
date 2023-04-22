@@ -9,6 +9,7 @@ const Sidebar = () => {
 
   return (
     <Wrapper className="w-1/5 h-screen bg-white p-4">
+      <h2 className="text-center text-xl font-semibold mb-4" >PLANTY STORE</h2>
       {sidebarLinks.map((link, index) => (
         <div key={link._id}>
           <button

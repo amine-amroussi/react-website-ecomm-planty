@@ -8,6 +8,8 @@ import AdminProduct from "./AdminProduct";
 import AdminFreeShipping from "./AdminFreeShipping";
 import AdminSingleOrder from "./AdminSingleOrder";
 import AdminTable from "./AdminTable";
+import Chart from "./Chart";
+import { Pie } from "react-chartjs-2";
 
 export {
   AdminHeader,
@@ -20,4 +22,6 @@ export {
   AdminFreeShipping,
   AdminSingleOrder,
   AdminTable,
+  Chart,
+  Pie,
 };

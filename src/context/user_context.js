@@ -157,12 +157,10 @@ export const UserProvider = ({ children }) => {
     dispatch({ type: FETCH_ALL_USERS_BEGGING });
     try {
       const response = await axios.get(`/user/`);
-      console.log(response.data);
       if (response.status === 200) {
         dispatch({ type: FETCH_ALL_USERS_SUCCESS, payload: response.data });
       }
     } catch (error) {
-      console.log(error);
     }
   };
 
@@ -175,7 +173,6 @@ export const UserProvider = ({ children }) => {
         showSuccessAlert(`The Email was sended successfuly.`);
       }
     } catch (error) {
-      console.log(error);
     }
   };
 
@@ -186,7 +183,6 @@ export const UserProvider = ({ children }) => {
         showSuccessAlert("The Email was sended.");
       }
     } catch (error) {
-      console.log(error);
     }
   };
 
