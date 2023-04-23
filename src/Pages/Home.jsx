@@ -14,8 +14,6 @@ const handleLoading = () => (<LoadingPage />)
 
 const Home = () => {
 
-  const params = new URL(document.location).searchParams;
-
   const {fetchFeaturedProducts} = useProductContext()
   useEffect(() => {
    fetchFeaturedProducts()

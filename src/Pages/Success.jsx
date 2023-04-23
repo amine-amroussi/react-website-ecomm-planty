@@ -3,19 +3,18 @@ import { MdVerified } from "react-icons/md";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useOrderContext } from "../context/order_context";
-import { useCartContext } from "../context/cart_context";
 
 const Success = () => {
- 
-  const {createOrder} = useOrderContext()
+  const { createOrder } = useOrderContext();
 
   useEffect(() => {
-    const cartProducts = window.localStorage.getItem('cart-products')
-    const cart = JSON.parse(cartProducts)
-    if(cartProducts) {
-      createOrder(cart)
+    const cartProducts = window.localStorage.getItem("cart-products");
+    const cart = JSON.parse(cartProducts);
+    if (cartProducts) {
+      createOrder(cart);
     }
-  } , [])
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <Wrapper className="h-screen flex justify-center items-center text-center">

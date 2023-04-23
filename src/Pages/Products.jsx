@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 import styled from "styled-components";
 import { Product, FilterProducts } from "../components";
 import { useProductContext } from "../context/product_context";
@@ -60,7 +59,7 @@ const Products = () => {
             </select>
           </div>
         </div>
-        <div className="products screen ">
+        <div className="products flex screen ">
           {filtredProducts?.length === 0 ? (
             <h2>There is no products ...</h2>
           ) : (

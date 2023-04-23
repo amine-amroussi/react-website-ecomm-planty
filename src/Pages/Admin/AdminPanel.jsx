@@ -4,7 +4,7 @@ import { useOrderContext } from "../../context/order_context";
 import { useEffect } from "react";
 import priceFormat from "../../util/priceFormat";
 import { useProductContext } from "../../context/product_context";
-import { Chart, Pie } from "../../components/Admin";
+import { Chart, } from "../../components/Admin";
 
 const AdminPanel = () => {
   const { revenue, calculateRevenue, allOrders, sales } = useOrderContext();
@@ -12,7 +12,9 @@ const AdminPanel = () => {
 
   useEffect(() => {
     calculateRevenue();
-  }, [revenue]);
+        // eslint-disable-next-line
+
+  }, []);
 
   return (
     <Wrapper className="w-full m-auto p-5 ">
@@ -47,7 +49,6 @@ const AdminPanel = () => {
       </div>
       <div className="statics flex mt-5">
         <Chart />
-        {/* <Pie /> */}
       </div>
     </Wrapper>
   );
