@@ -12,8 +12,7 @@ const AdminPanel = () => {
 
   useEffect(() => {
     calculateRevenue();
-        // eslint-disable-next-line
-
+    // eslint-disable-next-line
   }, []);
 
   return (
