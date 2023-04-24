@@ -75,6 +75,7 @@ export const CartProvider = ({ children }) => {
       }
     } catch (error) {
       showErrorAlert("Can't add this product, please try later.");
+      console.log(error)
       dispatch({ type: ADD_TO_CART_FAILED });
     }
   };
