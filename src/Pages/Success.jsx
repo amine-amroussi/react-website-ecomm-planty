@@ -10,7 +10,6 @@ const Success = () => {
   const { isAuth } = useUserContext();
 
   useEffect(() => {
-    if (!isAuth) return <Navigate to="/" />;
 
     const cartProducts = window.localStorage.getItem("cart-products");
     const cart = JSON.parse(cartProducts);
