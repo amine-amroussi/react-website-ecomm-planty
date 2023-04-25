@@ -4,7 +4,7 @@ import { useOrderContext } from "../../context/order_context";
 import { useEffect } from "react";
 import priceFormat from "../../util/priceFormat";
 import { useProductContext } from "../../context/product_context";
-import { Chart, } from "../../components/Admin";
+import { Chart } from "../../components/Admin";
 
 const AdminPanel = () => {
   const { revenue, calculateRevenue, allOrders, sales } = useOrderContext();
