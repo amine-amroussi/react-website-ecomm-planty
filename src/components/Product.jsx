@@ -54,8 +54,8 @@ const Product = ({ image, title, price, _id, shippingCost, averageRating }) => {
 };
 
 const Wrapper = styled.article`
-  width: 360px;
-  height: 335x;
+  width: 290px;
+  height: 335px;
   border-radius: 5px;
   overflow: hidden;
   /* background-color: white; */
