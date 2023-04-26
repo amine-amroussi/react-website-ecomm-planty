@@ -34,7 +34,7 @@ const FearuredProducts = () => {
 };
 
 const Wrapper = styled.section`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 
   .products {
