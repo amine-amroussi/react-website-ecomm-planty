@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { FormRow , Alert} from "../components";
+import { FormRow, Alert } from "../components";
 import { Link, Navigate } from "react-router-dom";
 import formBg from "../assets/form-bg.jpg";
+import logo from "../assets/logo.png";
 import { useUserContext } from "../context/user_context";
 import LoadingPage from "./LoadingPage";
 
@@ -19,19 +20,21 @@ const Login = () => {
     login({ user });
   };
 
-  if(loading) {
-    return <LoadingPage />
+  if (loading) {
+    return <LoadingPage />;
   }
 
-  if(isAuth) {
-    return <Navigate to={"/"} />
+  if (isAuth) {
+    return <Navigate to={"/"} />;
   }
 
   return (
     <Wrapper>
       <form onSubmit={handleSubmit}>
         <div className="form-header">
-          <h2>Pnatify</h2>
+          <Link to="/">
+            <img src={logo} alt="logo planty" className="w-[75px]" />
+          </Link>
           <Link to={"/register"}>Create new account.</Link>
         </div>
 
@@ -116,7 +119,7 @@ const Wrapper = styled.main`
     }
   }
 
-  @media only screen  and (max-width : 800px)  {
+  @media only screen and (max-width: 800px) {
     .image-background {
       display: none;
     }

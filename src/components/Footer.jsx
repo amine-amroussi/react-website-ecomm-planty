@@ -1,21 +1,45 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import logo from "../assets/logo.png";
+import cards from "../assets/cards.png";
 
 const Footer = () => {
   return (
-    <Wrapper><h2>All rights has reserved at Palnty shop &copy; {new Date().getFullYear()}</h2></Wrapper>
-  )
-}
+    <Wrapper>
+      <div className="logo">
+        <Link to="/">
+          <img src={logo} alt="logo planty" className="w-[75px]" />
+        </Link>
+      </div>
+      <div className="caption text-white font-semibold capitalize text text-center">
+        <h2 cla>All rights was reserved at PLANTY {new Date().getFullYear()} &copy;</h2>
+      </div>
+      <div className="cards">
+        <img src={cards} alt="payments card" className="w-[270px]" />
+      </div>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.footer`
-   h2 {
-    padding: 15px;
-    background-color: #2e2e2e;
-    text-align: center;
-    font-weight: 600;
-    color: white;
-    font-size: 1.2rem;
-   }
-`
+  background-color: #333533;
+  border-top: 2px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-export default Footer
+  .logo,
+  .caption,
+  .cards {
+    flex :1;
+  }
+
+  .cards {
+    img {
+      float: right;
+    }
+  }
+`;
+
+export default Footer;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from "react";
+import logo from "../assets/logo.png";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
@@ -11,13 +12,21 @@ import { useUserContext } from "../context/user_context";
 import { useCartContext } from "../context/cart_context";
 
 const Header = () => {
-  const { isDropDownActive, toggleDropDown,isMobileMenuActive, isAuth, user, toggleMenuMobile  } =
-    useUserContext();
-    const {products} = useCartContext()
-  
+  const {
+    isDropDownActive,
+    toggleDropDown,
+    isMobileMenuActive,
+    isAuth,
+    user,
+    toggleMenuMobile,
+  } = useUserContext();
+  const { products } = useCartContext();
+
   return (
     <Wrapper>
-      <MobileMenu className={`${isMobileMenuActive ? "menu active" : "menu"}`} />
+      <MobileMenu
+        className={`${isMobileMenuActive ? "menu active" : "menu"}`}
+      />
       <div className="left">
         <div className="wrap">
           <Link to={`/`}>
@@ -27,14 +36,14 @@ const Header = () => {
             <Link to={`/cart`}>
               <BsFillCartFill />
             </Link>
-            <div className="baget">
-              {products.length}
-            </div>
+            <div className="baget">{products.length}</div>
           </div>
         </div>
       </div>
       <div className="middle">
-        <input type="search" className="search-input" placeholder="Search" />
+        <Link to="/">
+          <img src={logo} alt="logo planty best choise" className="w-[80px]" />
+        </Link>
       </div>
       <div className="right">
         <button className="btn btn-menu-icon" onClick={toggleMenuMobile}>
@@ -159,12 +168,11 @@ const Wrapper = styled.header`
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        font-size: .9rem !important;
+        font-size: 0.9rem !important;
         right: -10px;
         color: white;
         border: 1px solid white;
       }
-
     }
   }
 

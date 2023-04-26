@@ -75,11 +75,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/checkout/success",
-        element: (
-          
-            <Success />
-          
-        ),
+        element: <Success />,
       },
       {
         path: "/orders",

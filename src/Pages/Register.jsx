@@ -5,6 +5,7 @@ import { Link, Navigate } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import formBg from "../assets/form-bg.jpg";
+import logo from '../assets/logo.png'
 import { useUserContext } from "../context/user_context";
 
 const Register = () => {
@@ -31,7 +32,9 @@ const Register = () => {
     <Wrapper>
       <form onSubmit={handleSubmit}>
         <div className="form-header">
-          <h2>Pnatify</h2>
+          <Link to='/' >
+            <img src={logo} alt="logo planty" className="w-[75px]" />
+          </Link>
           <Link to={"/login"}>Already have an account.</Link>
         </div>
 
@@ -47,6 +50,7 @@ const Register = () => {
             type={"text"}
             placeholder={"Enter your full name"}
             onChange={handleChange}
+            full={true}
           />
           <FormRow
             name={"email"}
@@ -54,8 +58,9 @@ const Register = () => {
             type={"email"}
             placeholder={"Enter you email"}
             onChange={handleChange}
+            full={true}
           />
-          <div className="form-row">
+          <div className="form-row ">
             <label>Phone Number (Optional)</label>
             <PhoneInput
               inputClass="phone-input"
@@ -71,6 +76,7 @@ const Register = () => {
             type={"password"}
             placeholder={"Enter you password"}
             onChange={handleChange}
+            full={true}
           />
 
           <button className="btn btn-login btn-form">Craete account</button>

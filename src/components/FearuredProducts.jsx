@@ -9,7 +9,7 @@ const FearuredProducts = () => {
   return (
     <Wrapper className="section">
       <div className="title">
-        <h2>Top Plants</h2>
+        <h2>trending now</h2>
         <div className="underline"></div>
       </div>
 

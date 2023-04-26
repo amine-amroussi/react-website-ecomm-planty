@@ -30,13 +30,13 @@ const AdminPanel = () => {
         <div className="box w-[230px] p-5 bg-white flex flex-col border border-rose-600	 rounded drop-shadw-md">
           <h4 className="font-semibold text-center text-3xl   ">N Orders</h4>
           <h4 className="font-semibold text-center text-xl   ">
-            {allOrders.length}
+            {allOrders?.length}
           </h4>
         </div>
         <div className="box w-[230px] p-5 bg-white flex flex-col border border-sky-400 rounded drop-shadw-md">
           <h4 className="font-semibold text-center text-3xl   ">N Products</h4>
           <h4 className="font-semibold text-center text-xl   ">
-            {products.length}
+            {products?.length}
           </h4>
         </div>
         <div className="box w-[230px] p-5 bg-white flex flex-col border border-blue-800 rounded drop-shadw-md">

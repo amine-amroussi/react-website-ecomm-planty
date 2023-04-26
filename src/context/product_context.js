@@ -94,7 +94,7 @@ export const ProductProvider = ({ children }) => {
         });
       }
     } catch (error) {
-      showErrorAlert(error.response.data.msg);
+      showErrorAlert(error.response?.data.msg);
       dispatch({ type: UPLOAD_PRODUCT_IMAGE_FAILED });
     }
   };
