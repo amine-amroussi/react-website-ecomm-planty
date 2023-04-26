@@ -7,7 +7,6 @@ import { useUserContext } from "../context/user_context";
 
 const Success = () => {
   const { createOrder } = useOrderContext();
-  const { isAuth } = useUserContext();
 
   useEffect(() => {
 
