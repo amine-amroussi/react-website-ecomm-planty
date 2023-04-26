@@ -1,13 +1,19 @@
 import React, { useEffect } from "react";
 import { MdVerified } from "react-icons/md";
-import { Link, } from "react-router-dom";
+import { Link, Navigate, } from "react-router-dom";
 import styled from "styled-components";
 import { useOrderContext } from "../context/order_context";
+import { useUserContext } from "../context/user_context";
 
 const Success = () => {
   const { createOrder } = useOrderContext();
+  const {isAuth} = useUserContext()
 
   useEffect(() => {
+
+    if (!isAuth) {
+      return <Navigate to='/' />
+    }
 
     const cartProducts = window.localStorage.getItem("cart-products");
     const cart = JSON.parse(cartProducts);

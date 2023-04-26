@@ -107,6 +107,7 @@ a {
 
 .prod-item {
   width: 270px;
+  overflow: hidden;
 }
 
 .modal {
