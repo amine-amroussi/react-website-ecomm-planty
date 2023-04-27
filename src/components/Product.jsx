@@ -14,7 +14,7 @@ const animationObj = {
   slideIn: keyframes`${slideInUp}`,
 };
 
-const Product = ({ image, title, price, _id, shippingCost, averageRating }) => {
+const Product = ({ image, title, price, _id, shippingCost, averageRating, isStyled }) => {
   const { addToCart } = useCartContext();
   const { isAuth } = useUserContext();
   let navigate = useNavigate();
@@ -33,7 +33,7 @@ const Product = ({ image, title, price, _id, shippingCost, averageRating }) => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper isStyled={isStyled}>
       <Link to={`/products/${_id}`}>
         <div className="image">
           <img src={process.env.REACT_APP_SERVER_URL + image} alt={title} />
@@ -54,7 +54,7 @@ const Product = ({ image, title, price, _id, shippingCost, averageRating }) => {
 };
 
 const Wrapper = styled.article`
-  width: 270px;
+  width: ${(props) => (prosp.isStyled ? '300px' : '280px')};
   height: 335px;
   border-radius: 5px;
   overflow: hidden;

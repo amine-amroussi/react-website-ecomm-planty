@@ -24,7 +24,7 @@ const FearuredProducts = () => {
               className="prod-item"
               key={product._id}
             >
-              <Product {...product} />
+              <Product {...product} isStyled={true} />
             </AnimationOnScroll>
           );
         })}
