@@ -54,7 +54,7 @@ const Product = ({ image, title, price, _id, shippingCost, averageRating, isStyl
 };
 
 const Wrapper = styled.article`
-  width: ${(props) => (prosp.isStyled ? '300px' : '280px')};
+  width: ${(props) => (props.isStyled ? '300px' : '280px')};
   height: 335px;
   border-radius: 5px;
   overflow: hidden;
