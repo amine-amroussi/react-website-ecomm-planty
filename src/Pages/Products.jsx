@@ -59,7 +59,7 @@ const Products = () => {
             </select>
           </div>
         </div>
-        <div className="products flex screen ">
+        <div className="products flex screen w-[90%] m-auto">
           {filtredProducts?.length === 0 ? (
             <h2>There is no products ...</h2>
           ) : (
@@ -99,7 +99,7 @@ const Wrapper = styled.section`
     gap: 15px;
     flex-wrap: wrap;
     padding: 20px;
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
   }
 

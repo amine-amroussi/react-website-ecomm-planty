@@ -34,7 +34,7 @@ const Product = ({ image, title, price, _id, shippingCost, averageRating, isStyl
 
   return (
     <Wrapper isStyled={isStyled}>
-      <Link to={`/products/${_id}`}>
+      <Link to={`/products/${_id}`}>  
         <div className="image">
           <img src={process.env.REACT_APP_SERVER_URL + image} alt={title} />
         </div>
@@ -54,7 +54,7 @@ const Product = ({ image, title, price, _id, shippingCost, averageRating, isStyl
 };
 
 const Wrapper = styled.article`
-  width: ${(props) => (props.isStyled ? '300px' : '280px')};
+  width: ${(props) => (props.isStyled ? '100%' : '340px')};
   height: 335px;
   border-radius: 5px;
   overflow: hidden;

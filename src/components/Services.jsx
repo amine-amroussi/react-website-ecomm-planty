@@ -32,7 +32,7 @@ const Services = () => {
           animateOnce={true}
           className="service-item"
         >
-          <Service title="Shipping to you." img={sv3} />
+          <Service title="Shipped to you." img={sv3} />
         </AnimationOnScroll>
       </div>
     </Wrapper>
@@ -56,16 +56,16 @@ const Wrapper = styled.section`
 
   .services {
     display: flex;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: var(--ligt-pink-clr);
     padding: 35px;
     border-radius: 10px;
     gap: 20px;
     flex-wrap : wrap;
     .service-item {
-      width: 32%;
+      width: 200px;
     }
     .service {
       text-align: center;

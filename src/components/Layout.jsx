@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <main>
       <Header />
-      <div className="mt-[80px]">
+      <div className="mt-[80px] container">
         <Outlet />
       </div>
       <Footer />

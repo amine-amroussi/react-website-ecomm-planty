@@ -22,7 +22,7 @@ const Banner = () => {
         <p>
           your one-stop shop for all plant related goodness. It’s a place to
           learn how to become the best possible plant parent and connect with
-          other plant lovers throughout Europe
+          other plant lovers throughout all the word
         </p>
         <Link to='/products' className="btn descover-btn">descover plants</Link>
       </div>

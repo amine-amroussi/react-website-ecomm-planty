@@ -22,7 +22,7 @@ const Newsletter = () => {
 
 const Wrapper = styled.section`
   display: flex;
-  width: 84%;
+  width: 90%;
   align-items: center;
   margin: 15px auto;
   padding: 15px;
