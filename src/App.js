@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, lazy } from "react";
 import {
   Home,
   Login,
@@ -12,6 +12,7 @@ import {
   Checkout,
   Success,
   Orders,
+  LoadingPage,
 } from "./Pages";
 import {
   AdminCreateProduct,
@@ -144,6 +145,7 @@ const App = () => {
   const { showCurrentUser, user, fetchAllUsers } = useUserContext();
   const { showMyCart, loadAllCountries } = useCartContext();
   const { fetchUserOrders, ftechAllOrders } = useOrderContext();
+
   useEffect(() => {
     showCurrentUser();
     showMyCart();
@@ -155,7 +157,7 @@ const App = () => {
   }, [user.userId]);
 
   return (
-    <div className="App">
+    <div className="App" onLoad={<LoadingPage />}>
       <RouterProvider router={router} />
     </div>
   );
