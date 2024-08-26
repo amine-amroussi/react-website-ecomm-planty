@@ -21,7 +21,7 @@ const Home = () => {
   }, [])
   
   return (
-    <main onLoad={handleLoading}>
+    <main >
       <Banner />
       <Categories />
       <FearuredProducts />

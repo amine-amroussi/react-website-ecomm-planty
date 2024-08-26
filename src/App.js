@@ -157,7 +157,7 @@ const App = () => {
   }, [user.userId]);
 
   return (
-    <div className="App" onLoad={<LoadingPage />}>
+    <div className="App">
       <RouterProvider router={router} />
     </div>
   );

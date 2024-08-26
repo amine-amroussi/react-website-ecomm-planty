@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://blue-outstanding-shrimp.cyclic.app/api/v1",
+  baseURL: "https://ecom-api-aukh.onrender.com/api/v1",
   withCredentials: true
 });
 
