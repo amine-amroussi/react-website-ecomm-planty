@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, lazy } from "react";
+import { useEffect } from "react";
 import {
   Home,
   Login,
@@ -12,7 +12,7 @@ import {
   Checkout,
   Success,
   Orders,
-  LoadingPage,
+  
 } from "./Pages";
 import {
   AdminCreateProduct,

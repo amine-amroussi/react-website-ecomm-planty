@@ -10,7 +10,6 @@ import { useProductContext } from "../context/product_context";
 
 import LoadingPage from "./LoadingPage"
 
-const handleLoading = () => (<LoadingPage />)
 
 const Home = () => {
 
