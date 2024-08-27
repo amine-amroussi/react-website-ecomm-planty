@@ -8,7 +8,6 @@ import {
 } from "../components";
 import { useProductContext } from "../context/product_context";
 
-import LoadingPage from "./LoadingPage"
 
 
 const Home = () => {
